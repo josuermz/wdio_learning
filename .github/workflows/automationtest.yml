@@ -2,6 +2,8 @@ name: Test Project
 on: push
 jobs:
   test:
+    env:
+      HEROKU_PAGE_NAME: ${{ secrets.HEROKU_PAGE_NAME }}
     runs-on: windows-latest
     steps:
       - name: Get Code
