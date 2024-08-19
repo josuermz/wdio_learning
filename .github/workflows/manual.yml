@@ -2,7 +2,9 @@
 name: wdio runing test 
 on: workflow_dispatch
 jobs:
-  build:
+  test:
+    env:
+      HEROKU_PAGE_NAME: ${{secrets.HEROKU_PAGE_NAME}}
     runs-on: windows-latest
     steps:
       - name: Checkout
